@@ -1,0 +1,1 @@
+ALTER TABLE `insights` MODIFY COLUMN `type` enum('contradiction','missing_document','deadline_mentioned','risk','strength','next_step','prazo_2_dias','prazo_hoje','compromisso_hoje','documento_prazo','caso_parado') NOT NULL;
