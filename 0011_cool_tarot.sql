@@ -1,0 +1,1 @@
+ALTER TABLE `pipelineItems` ADD `tags` text;

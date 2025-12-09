@@ -1,0 +1,1 @@
+ALTER TABLE `chatMessages` ADD `feedback` enum('positive','negative');

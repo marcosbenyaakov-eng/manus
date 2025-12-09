@@ -1,0 +1,21 @@
+CREATE TABLE `notificationPreferences` (
+	`id` int AUTO_INCREMENT NOT NULL,
+	`userId` int NOT NULL,
+	`prazo_proximo` boolean DEFAULT true,
+	`prazo_hoje` boolean DEFAULT true,
+	`prazo_atrasado` boolean DEFAULT true,
+	`nova_movimentacao_processo` boolean DEFAULT true,
+	`documento_anexado` boolean DEFAULT true,
+	`insight_critico` boolean DEFAULT true,
+	`caso_inativo` boolean DEFAULT true,
+	`pagamento_recebido` boolean DEFAULT true,
+	`lead_convertido` boolean DEFAULT true,
+	`checklist_incompleto` boolean DEFAULT true,
+	`emailEnabled` boolean DEFAULT false,
+	`emailAddress` varchar(255),
+	`quietHoursStart` varchar(5),
+	`quietHoursEnd` varchar(5),
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `notificationPreferences_id` PRIMARY KEY(`id`)
+);
